@@ -1,4 +1,4 @@
-const SimpleCard = require("./Simple");
+const BasicCard = require("./Basic");
 const Cloze = require("./Cloze");
 const inquirer = require("inquirer");
 const fs = require("fs");
@@ -84,7 +84,7 @@ var cardArray = [];
 
                 if (jsonContent[x].hasOwnProperty("front")) {
 
-                    var gameCard = new SimpleCard(jsonContent[x].front, jsonContent[x].back);
+                    var gameCard = new BasicCard(jsonContent[x].front, jsonContent[x].back);
                     var gameQuestion = gameCard.front;
                     var gameAnswer = gameCard.back.toLowerCase();
                 } 
@@ -125,7 +125,7 @@ var cardArray = [];
                 })
 
             } 
-            
+
             else {
                 console.log('Here\'s your results: ');
                 console.log('correct: ' + correct);
