@@ -90,9 +90,9 @@ var cardArray = [];
                 } 
 
                 else {
-                    var gameCard = new Cloze(jsonContent[x].text, jsonContent[x].cloze);
-                    var gameQuestion = gameCard.message;
-                    var gameAnswer = gameCard.cloze.toLowerCase();
+                    gameCard = new Cloze(jsonContent[x].text, jsonContent[x].cloze);
+                    gameQuestion = gameCard.message;
+                    gameAnswer = gameCard.cloze.toLowerCase();
                 }
 
                 inquirer.prompt([{
